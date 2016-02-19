@@ -13,8 +13,7 @@
     "sdkVersion": "3",
     "shortName": "Timelines",
     "targetPlatforms": [
-        "basalt",
-        "chalk"
+        "basalt"
     ],
     "uuid": "1080009a-f3ed-48b3-b392-24a459f5a975",
     "versionLabel": "1.0",
