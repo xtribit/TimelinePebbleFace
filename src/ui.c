@@ -1,19 +1,31 @@
 #include <pebble.h>
 #include "ui.h"
+#include "datetime.h"
 #include "routines.h"
 #include "constants.h"
 
 static Layer *s_canvas_layer;
-static Layer *layers[TIMELINE_NUMBER];
+static Layer *s_layers[TIMELINE_NUMBER];
+static Layer *s_timeline_line;
+static Datetime s_last_datetime;
+
+static void create_layers(){
+}
+
+static void update_layers(){
+}
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
   if (!ui_update_needed(tick_time))
     return;
   
+  s_last_datetime = tm_to_datetime(tick_time);
+  
+  update_layers();
 }
 
 static void update_proc(Layer *layer, GContext *ctx) {
-  
+  create_layers();
 }
 
 void create_canvas(Window *window){

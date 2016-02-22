@@ -9,4 +9,4 @@ typedef struct{
   int year;
 } Datetime;
 
-Datetime tm_to_datetime(struct tm time);
+Datetime tm_to_datetime(struct tm *time);
